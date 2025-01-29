@@ -26,12 +26,13 @@
 }
 
 .select {
-    position: absolute;
+    position:relative;
     left: 5%
 }
 p{
     text-align: center;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .tb{
