@@ -3,15 +3,25 @@
 <head>
     <title>Kalkulator BMI</title>
     <link rel="stylesheet" href="css/style.css">
-    <center><h1 class="judul">Kalkulator BMI</h1></center>
+    <script src="script/index.js" defer></script>
+    <h1 class="judul">Kalkulator BMI</h1>
 </head>
 <body class="bungkus">
 
    <div class="kotak">
-    <p>Silahkan masukkan tinggi dan berat badaan untuk menentukan <i>body mass index</i> anda. </p>
-     <br> tinggi badan = <input type="number" placeholder="masukkan tinggi badan" min="1" </br>
-     <p>berat badan &ensp;= <input type="number" placeholder="masukkan berat badan" min="1"> </p>
-    <p><button class="tombol" >kirim</button></p>
+    <p>Silahkan masukkan tinggi dan berat badan untuk menentukan <i>body mass index</i> anda. </p>
+    <select class="select">
+          <option value="pria">pria</option>
+          <option value="wanita">wanita</option>
+    </select>
+     <p> tinggi badan = <input type="number" placeholder="masukkan tinggi badan" id ="height" min="1"></t>
+     <br><span id="height_error"></span>
+     <br>berat badan &ensp;= <input type="number" placeholder="masukkan berat badan" id = "weight" min="1"> 
+     <br><span id="weight_error"></span></p>
+    <button class="tombol" id="btn"> Hitung </button>
+    <br>
+    <br>
+    <p id="output"> </p>
    </div>
     
 </body>
