@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- judul website -->
     <title>Kalkulator BMI</title>
+    <!-- penghubung ke css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- penghubung ke java script -->
     <script src="script/index.js" defer></script>
+    <!-- judul -->
     <h1 class="judul">Kalkulator BMI</h1>
 </head>
 <body class="bungkus">
-
+    
    <div class="kotak">
     <p>Silahkan masukkan tinggi dan berat badan untuk menentukan <i>body mass index</i> anda. </p>
     <select class="select">
           <option value="pria">pria</option>
           <option value="wanita">wanita</option>
     </select>
-     <p> tinggi badan = <input type="number" placeholder="masukkan tinggi badan" id ="height" min="1"></t>
+     <p> Tinggi Badan (Cm)= <input type="number" placeholder="masukkan tinggi badan" id ="height" min="1"></t>
      <br><span id="height_error"></span>
-     <br>berat badan &ensp;= <input type="number" placeholder="masukkan berat badan" id = "weight" min="1"> 
-     <br><span id="weight_error"></span></p>
+     <br>Berat Badan (Kg)&ensp;= <input type="number" placeholder="masukkan berat badan" id = "weight" min="1"> 
+     <br><span id="weight_error"></span>
+     <br>Umur (Tahun)&emsp; &ensp; = <input type="number" placeholder="masukkan Umur" id = "age" min="1"> 
+     <br><span id="age_error"></span></p>
     <button class="tombol" id="btn"> Hitung </button>
     <br>
     <br>

@@ -1,12 +1,13 @@
 let button = document.getElementById('btn');
 button.addEventListener('click',() => {
+    // mengambil ID dari HTML
     const height = parseInt(document.getElementById('height').value);
     const weight = parseInt(document.getElementById('weight').value);
-    // const pria = getElementById('pria')=1;
-    // const wanita = getElementById('wanita')=0;
+    const age = parseInt(document.getElementById('age').value);
     const result = document.getElementById('output');
     let height_status= false, weight_status=false;
 
+    // pemasukan kemungkinan error
     if(height === '' || isNaN(height) || (height <= 0)){
         document.getElementById('height_error').innerHTML = 'tolong masukkan tinggi anda dengan benar';}
     else{
@@ -21,9 +22,18 @@ button.addEventListener('click',() => {
         weight_status=true
     }
 
-    if(height_status && weight_status){
+    if(age === '' || isNaN(age) || (age <= 0)){
+        document.getElementById('age_error').innerHTML = 'tolong masukkan umur anda dengan benar';}
+    else{
+        document.getElementById('age_error').innerHTML = '';
+        age_status=true
+    }
+
+    // rumus BMI
+    if(height_status && weight_status && age_status){
     const bmi = (weight / ((height*height)/10000)).toFixed(2);
 
+    // penentuan pengelompokan BMI
     if(bmi <= 18.5){
         result.innerHTML = 'berat badan kurang : '+ bmi; }
     else if(bmi > 18.5 && bmi <23){
@@ -35,15 +45,5 @@ button.addEventListener('click',() => {
     else{
         result.innerHTML = 'obesitas 2 : '+ bmi;}
     }
-
-    // if(height_status && weight_status){
-    //     const bmi = (weight / ((height*height)/10000)).toFixed(2);
-    
-    //     if(bmi < 18.6){
-    //         result.innerHTML = 'kekurangan berat : '+ bmi; }
-    //     else if(bmi >= 18.6 && bmi <30){
-    //         result.innerHTML = 'Normal : '+ bmi;}
-    //     else{
-    //         result.innerHTML = 'kelebihan berat : '+ bmi;}
-    //     }    
+  
 });
